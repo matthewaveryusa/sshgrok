@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+   tun:
+     container_name: tun
+     image: tun:latest
+     ports: 
+       - "4080:3000"
+       - "4022:4022"
+     environment:
+#       SSH_PUBKEY: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJr39o0k2uCPLDv97zXntULFvgac2l6oFMPbyGklPbAz bootstrap" 
+       SSH_PUBKEY: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCvrswdxtMKTI6ppa5vAe5BwZEk0i2IkJq42CLgxL1PeZkM5kKtsY5wL0U593AoRbdJ/H2iHlUkmI+d+q3t3mD7yXb7VhyjIu1ejEELiOgyAFHLQY8aqUgVgHDu98qXm5wbFRTROjQ3v2GMRgQ06xvQY5997TlssPwwVUUrFpLPyJIFsjZXh4HTvGnVfKkl+XjnBDYWQWWR5ukR1MIUwT80BGzVHuAveXeu7BpqSjtfMnUI6zSh/JnNbuVKkyflKpanOo5kkl8had0M+AkP0vSzl5AmchdtXuok90gWJHEpXbBjzg69YdFTxgZ4ttUfrCdvFDeZrtZ7FzHwH/FCLlf4Gsl3M6OWVVPGwykco7+ZpyMnOPn8UjyNP23RDKCm+J62yYDyZKIKypix27jyZ8SkVdexaNkGEUNU+nPWvrLqVH3D2wkIf1OcMgolKm2S9pgYJTHdfJRya9ejoG6sU9B/1CuexUy5HjRKBTOMVGHlRrJcZfjWQhWpgYvcAWyirHE= root@docker01"

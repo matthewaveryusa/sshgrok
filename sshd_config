@@ -1,0 +1,14 @@
+PasswordAuthentication no
+ChallengeResponseAuthentication no
+HostKey /etc/ssh/host_ed25519
+AuthorizedKeysFile .ssh/authorized_keys
+
+Match user sshgrok
+    AllowTcpForwarding all
+    X11Forwarding no
+    PermitTunnel no
+    GatewayPorts yes
+    AllowAgentForwarding no
+    PermitOpen localhost:3000
+    ForceCommand echo 'This account can only be used for tunneling'
+
